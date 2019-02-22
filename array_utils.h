@@ -9,7 +9,7 @@
 
 #include "array_utils.h"
 
-int containsWithin(const int *arr, int size, int x, int i, int j) {
+int containsWithin(const int *arr, int size, int x, int i, int j) { // Runs through the array and looks for when a value is the same as x between i and j
    //todo
    for(; i <= j; i++){
       if(arr[i] == x){
@@ -22,7 +22,7 @@ int containsWithin(const int *arr, int size, int x, int i, int j) {
 int contains(const int *arr, int size, int x) {
 
    //todo
-   for(int i = 0; i < size; i++){
+   for(int i = 0; i < size; i++){ // Runs through the array and looks for when a value is the same as x
       if(arr[i] == x){
          return 1;
       }
@@ -33,10 +33,10 @@ int contains(const int *arr, int size, int x) {
 void reverse(int *arr, int size) {
    //todo
    int tempArr[size];
-   for(int i = 0, j = size - 1; i < size; i++,j--){
+   for(int i = 0, j = size - 1; i < size; i++,j--){ // Copies the values of the original array from right to left onto 
       tempArr[i] = arr[j];
    }
-   for(int i = 0; i < size; i++){
+   for(int i = 0; i < size; i++){ // Copies the temporary array onto the original array
       arr[i] = tempArr[i];
       printf("%d ", arr[i]);
    }
@@ -52,12 +52,18 @@ int orderStatistic(int *arr, int size, int i){
    int prevMin = -1;
       for (int j = 0; j < i; ++j){
          index = 0;
-               while(arr[index] <= prevMin && index < size - 1){
+               while(arr[index] <= prevMin && index < size - 1){ // Catches if the array element is less than or equal to the previous minimum to avoid using number again
                   index++;
                }
-               if(arr[index] > prevMin){
+         
+               /* 
+                * Tests if the current index of the array is greater than the previous minimum value
+                * This is necessary because the value of the previous minimum has to be surpassed in order to find
+                * the next smallest value.
+                */
+               if(arr[index] > prevMin){ 
                   min = arr[index];
-                  for (int index2 = 0; index2 < size; index2++){
+                  for (int index2 = 0; index2 < size; index2++){ // Searches 
                       if(arr[index2] <= min && arr[index2] > prevMin){
                         min = arr[index2];
                      }

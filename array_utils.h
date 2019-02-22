@@ -51,5 +51,10 @@ int orderStatistic(int *arr, int size, int i){
 
 int main(){
    //you may choose to do your testing here
+   int array[4] = {1,2,3,4};
+   printf("%d\n", array[2]);
+   contains(array, 4, 2);
+   printf("%d\n", contains(array, 4, 2) );
+   printf("%d\n", contains(array, 4, 5) );
    return 0;
 }

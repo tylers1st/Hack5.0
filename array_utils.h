@@ -79,7 +79,7 @@ int orderStatistic(int *arr, int size, int i){
 int main(){
    //you may choose to do your testing here
 
-   // Test 1
+   // Test 1: contains
    int array[4] = {1,2,3,4};  
    printf("TESTING: contains\n");
    if(contains(array, 4, 2) == 1) {
@@ -89,7 +89,7 @@ int main(){
       printf("Failed\n");
    }
    
-   // Test 2
+   // Test 2: contains
    printf("TESTING: contains\n");
    if(contains(array, 4, 5) == 0){
       printf("Passed\n");
@@ -98,7 +98,7 @@ int main(){
       printf("Failed\n");
    }
    
-   // Test 3
+   // Test 3: containsWithin
    int array2[5] = {3,6,9,12,15}; 
    printf("TESTING: containsWithin\n");   // test containsWithin
    if(containsWithin(array2, 5, 9, 1, 4) == 1){
@@ -108,7 +108,7 @@ int main(){
       printf("Failed\n");
    }
    
-   // Test 4
+   // Test 4: containsWithin
    printf("TESTING: containsWithin\n");
    if(containsWithin(array2, 5, 12, 0, 2) == 0){
       printf("Passed\n");
@@ -117,7 +117,7 @@ int main(){
       printf("Failed\n");
    }
    
-   // Test 5
+   // Test 5: containsWithin
    int array6[8] = {-4, 5, 3, -122, 0, 90, 0, 0};
    printf("TESTING: containsWithin\n");
    if(containsWithin(array6, 8, 0, 3, 6) == 1){
@@ -127,7 +127,7 @@ int main(){
       printf("Failed\n");
    }
    
-   // Test 6
+   // Test 6: containsWithin
    printf("TESTING: containsWithin\n");
    if(containsWithin(array6, 8, 0, 3, 4) == 1){
       printf("Passed\n");
@@ -136,7 +136,7 @@ int main(){
       printf("Failed\n");
    }
    
-   // Test 7
+   // Test 7: reverse
    int array3[5] = {2, 4, 6, 8, 10};
    printf("TESTING: reverse\n");
    for(int i = 0; i < 5; i++){
@@ -145,7 +145,7 @@ int main(){
    printf("\n");
    reverse(array3, 5);
    
-   // Test 8
+   // Test 8: reverse
    int array5[12] = {1, -3, 4, 10, 250, -67, 14, -25555, 10, 10, 529, -16};
    printf("TESTING: reverse\n");
    for(int i = 0; i < 5; i++){
@@ -154,7 +154,7 @@ int main(){
    printf("\n");
    reverse(array3, 5);
    
-   // Test 9
+   // Test 9: orderStatistic
    int array4[8] = {5, 12, 18, 24, 12, 22, 1, 5};
    printf("TESTING: orderStatistic\n");
    if(orderStatistic(array4, 8, 6) == 24){
@@ -164,7 +164,7 @@ int main(){
       printf("Failed\n");
    }
    
-   // Test 10
+   // Test 10: orderStatistic
    printf("TESTING: orderStatistic\n");
    if(orderStatistic(array4, 8, 1) == 1){
       printf("Passed\n");
@@ -173,7 +173,7 @@ int main(){
       printf("Failed\n");
    }
    
-   // Test 11
+   // Test 11: orderStatistic
    printf("TESTING: orderStatistic\n");
    if(orderStatistic(array4, 8, 3) == 12){
       printf("Passed\n");

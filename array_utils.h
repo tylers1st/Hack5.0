@@ -21,7 +21,9 @@ void reverse(int *arr, int size) {
    }
    for(int i = 0; i < size; i++){
       arr[i] = tempArr[i];
+      printf("%d ", arr[i]);
    }
+   printf("\n");
   return;
 }
 

@@ -22,18 +22,19 @@ void reverse(int *arr, int size) {
 int orderStatistic(int *arr, int size, int i){
    int element = -1;
    //todo
+   int index;
    int min = arr[0];
    int prevMin = -1;
-      for (int j = 0; j < i; ++j){
+      for (int j = 0, index = 0; j < i; ++j, index++){
       printf("\n\nj = %d\n\n", j);
       printf("\nFirst for loop\n");
-      printf("min = %d, prevMin = %d, arr[j] = %d\n", min, prevMin, arr[j]);
-         if (arr[j] > prevMin){
-            min = arr[j];
-            for (int k = 0; k < size; k++){
-               printf("arr[%d] = %d\n",k,arr[k]);
-               if(arr[k] < min && arr[k] > prevMin){
-                  min = arr[k];
+      printf("min = %d, prevMin = %d, arr[index] = %d\n", min, prevMin, arr[index]);
+         if (arr[index] > prevMin){
+            min = arr[index];
+            for (index 0; index < size; index++){
+               printf("arr[%d] = %d\n",k,arr[index]);
+               if(arr[index] < min && arr[index] > prevMin){
+                  min = arr[index];
                   printf("min = %d\n\n", min);
                   prevMin = min;
                }

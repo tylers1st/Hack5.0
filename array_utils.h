@@ -5,6 +5,11 @@
 
 int containsWithin(const int *arr, int size, int x, int i, int j) {
    //todo
+   for(; i <= j; i++){
+      if(arr[i] == x){
+         return 1;
+      }
+   }
   return 0;
 }
 

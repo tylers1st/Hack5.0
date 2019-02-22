@@ -24,7 +24,7 @@ int orderStatistic(int *arr, int size, int i){
    int min = arr[0];
    int prevMin = -1;
    for (int iteration = 0; iteration < size; iteration++){  // Used for assignment of the ith value
-      for (int j = 0; j < i; j++){ // Used for determining the next ith value
+      for (int j = 0; j < size; j++){ // Used for determining the next ith value
          if (arr[j] > prevMin){
             min = arr[j];
             if (arr[j] < min && arr[j] > prevMin){

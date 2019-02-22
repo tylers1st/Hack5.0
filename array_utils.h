@@ -23,15 +23,14 @@ int orderStatistic(int *arr, int size, int i){
    int element = -1;
    //todo
    int min = arr[0];
-   int prevMin = min;
-      for (int j = 0; j < i; ++j){ // Used for determining the next ith value
-            printf("\n\nj = %d\n\n", j);
+   int prevMin = -1;
+      for (int j = 0; j < i; ++j){
+      printf("\n\nj = %d\n\n", j);
       printf("\nFirst for loop\n");
       printf("min = %d, prevMin = %d, arr[j] = %d\n", min, prevMin, arr[j]);
          if (arr[j] > prevMin){
-            // printf("min = %d\n", min);
             min = arr[j];
-            for (int k = j; k < size; k++){
+            for (int k = 0; k < size; k++){
                printf("arr[%d] = %d\n",k,arr[k]);
                if(arr[k] < min){
                   min = arr[k];
@@ -47,7 +46,9 @@ int orderStatistic(int *arr, int size, int i){
 
 int main(){
    //you may choose to do your testing here
-   int array[10] = {1,2,5,4,5,6,7,8,9,10};
-   printf("%d", orderStatistic(array, 10, 3));
+   // int array[10] = {1,2,5,4,5,6,7,8,9,10};
+   // printf("%d\n", orderStatistic(array, 10, 3));
+   int array2[4] = {5,2,4,1};
+   printf("%d\n", orderStatistic(array2, 4 , 2));
    return 0;
 }

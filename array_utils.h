@@ -67,18 +67,54 @@ int orderStatistic(int *arr, int size, int i){
 
 int main(){
    //you may choose to do your testing here
-   int array[4] = {1,2,3,4};
-   printf("%d\n", contains(array, 4, 2) ); // Test 1
-   printf("%d\n", contains(array, 4, 5) ); // Test 2
+
+   // Test 1
+   int array[4] = {1,2,3,4};  
+   printf("TESTING: contains\n");
+   if(contains(array, 4, 2) == 1) {
+      printf("Passed\n");
+   }
+   else{
+      printf("Failed\n");
+   }
    
-   int array2[5] = {3,6,9,12,15}; // test containsWithin
-   printf("%d\n", array2[3]); 
-   printf("%d\n",containsWithin(array2, 5, 9, 1,4)); // containsWithin test 1 true 
-   printf("%d\n", containsWithin(array2, 5, 12, 0, 2)); // test 2 false
+   // Test 2
+   printf("TESTING: contains\n");
+   if(contains(array, 4, 5) == 1){
+      printf("Passed\n");
+   }
+   else{
+      printf("Failed\n");
+   }
    
-   int array3[5] = { 2,4,6,8,10};
+   // Test 3
+   int array2[5] = {3,6,9,12,15}; 
+   printf("TESTING: containsWithin\n");   // test containsWithin
+   if(containsWithin(array2, 5, 9, 1, 4) == 1){
+      printf("Passed\n");
+   }
+   else{
+      printf("Failed\n");
+   }
+   
+   // Test 4
+   printf("TESTING: containsWithin\n");
+   if(containsWithin(array2, 5, 12, 0, 2) == 1){
+      printf("Passed\n");
+   }
+   else{
+      printf("Failed\n");
+   }
+   
+   // Test 5
+   int array3[5] = {2, 4, 6, 8, 10};
+   printf("TESTING: reverse\n");
+   if(reverse
    printf("%d\n", array3[3]); 
    reverse(array3, 5);
+   
+   int array4[8] = {5, 12, 18, 24, 12, 22, 1, 5};
+   printf("%d\n", orderStatistic(array4, 8, 6));
    
    
    return 0;

@@ -30,8 +30,6 @@ int orderStatistic(int *arr, int size, int i){
          printf("\n\nj = %d\n\n", j);
          printf("\nFirst for loop\n");
          printf("min = %d, prevMin = %d, arr[index] = %d\n", min, prevMin, arr[index]);
-         for(index = 0; index < size; index++){
-            printf("Index = %d\n", index);
             if (arr[index] > prevMin){
                 min = arr[index];
                for (int index2 = 0; index2 < size; index2++){
@@ -43,7 +41,8 @@ int orderStatistic(int *arr, int size, int i){
                }
             prevMin = min;
             }
-         }
+         // }
+         index++;
       }
    element = min;
    return element;

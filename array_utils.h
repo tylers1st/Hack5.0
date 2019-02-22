@@ -51,12 +51,5 @@ int orderStatistic(int *arr, int size, int i){
 
 int main(){
    //you may choose to do your testing here
-   // int array[10] = {1,2,5,4,5,6,7,8,9,10};
-   // printf("%d\n", orderStatistic(array, 10, 3));
-   int array2[4] = {5,2,1,0};
-   printf("%d\n", orderStatistic(array2, 4 , 1));
-   printf("\n---------------\n");
-   
-   printf("%d\n", orderStatistic(array2, 4, 2));
    return 0;
 }

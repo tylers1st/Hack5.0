@@ -70,10 +70,16 @@ int main(){
    int array[4] = {1,2,3,4};
    printf("%d\n", contains(array, 4, 2) ); // Test 1
    printf("%d\n", contains(array, 4, 5) ); // Test 2
+   
    int array2[5] = {3,6,9,12,15}; // test containsWithin
    printf("%d\n", array2[3]); 
    printf("%d\n",containsWithin(array2, 5, 9, 1,4)); // containsWithin test 1 true 
    printf("%d\n", containsWithin(array2, 5, 12, 0, 2)); // test 2 false
+   
+   int array3[5] = { 2,4,6,8,10};
+   printf("%d\n", array3[3]); 
+   reverse(array3, 5);
+   
    
    return 0;
 }

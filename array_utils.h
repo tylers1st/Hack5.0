@@ -22,20 +22,25 @@ int orderStatistic(int *arr, int size, int i){
    int element = -1;
    //todo
    int min = arr[0];
-   int prevMin = min;
+   int prevMin = -1;
    for (int iteration = 0; iteration < size; iteration++){  // Used for assignment of the ith value
-      for (int j = 0; j < size; j++){ // Used for determining the next ith value
-         if (arr[j] < min && arr[j] > prevMin){
+      for (int j = 0; j < i; j++){ // Used for determining the next ith value
+         if (arr[j] > prevMin){
             min = arr[j];
+            if (arr[j] < min && arr[j] > prevMin){
+               min = arr[j];
+               prevMin = arr[j];
+            }
          }
       }
    }
+   element = min;
    return element;
 }
 
 int main(){
    //you may choose to do your testing here
    int array[10] = {1,2,3,4,5,6,7,8,9,10};
-   printf("%d", orderStatistic(array, 10, 1));
+   printf("%d", orderStatistic(array, 10, 3));
    return 0;
 }

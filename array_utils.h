@@ -1,3 +1,9 @@
+/*
+ * Authors: Theo Joseph and Tyler Furst
+ * Date: 02/22/2019
+ * This program is for practicing use of methods
+ */
+
 #include<stdlib.h>
 #include<stdio.h>
 
@@ -79,7 +85,7 @@ int main(){
    
    // Test 2
    printf("TESTING: contains\n");
-   if(contains(array, 4, 5) == 1){
+   if(contains(array, 4, 5) == 0){
       printf("Passed\n");
    }
    else{
@@ -153,6 +159,7 @@ int main(){
    }
    
    // Test 10
+   printf("TESTING: orderStatistic\n");
    if(orderStatistic(array4, 8, 1) == 1){
       printf("Passed\n");
    }
@@ -161,6 +168,7 @@ int main(){
    }
    
    // Test 11
+   printf("TESTING: orderStatistic\n");
    if(orderStatistic(array4, 8, 3) == 12){
       printf("Passed\n");
    }

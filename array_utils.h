@@ -27,22 +27,19 @@ int orderStatistic(int *arr, int size, int i){
    int prevMin = -1;
       for (int j = 0; j < i; ++j){
          index = 0;
-//printf("\n\nj = %d\n\n", j);
-//printf("\nFirst for loop\n");
-//printf("min = %d, prevMin = %d, arr[index] = %d\n", min, prevMin, arr[index]);
-            if (arr[index] > prevMin){
-                min = arr[index];
-               for (int index2 = 0; index2 < size; index2++){
-// printf("arr[%d] = %d\n",index2,arr[index2]);
-                   if(arr[index2] < min && arr[index2] > prevMin){
-                     min = arr[index2];
-//printf("min = %d\n\n", min);
-                  }
+               while(arr[index] <= prevMin && index < size - 1){
+                  index++;
                }
-            prevMin = min;
-            }
-         // }
-         index++;
+               if(arr[index] > prevMin){
+                  min = arr[index];
+                  for (int index2 = 0; index2 < size; index2++){
+                      if(arr[index2] <= min && arr[index2] > prevMin){
+                        min = arr[index2];
+                     }
+                  }
+               prevMin = min;
+               }
+            index++;
       }
    element = min;
    return element;

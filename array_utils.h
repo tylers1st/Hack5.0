@@ -32,13 +32,13 @@ int orderStatistic(int *arr, int size, int i){
             min = arr[j];
             for (int k = 0; k < size; k++){
                printf("arr[%d] = %d\n",k,arr[k]);
-               if(arr[k] < min){
+               if(arr[k] < min && arr[k] > prevMin){
                   min = arr[k];
                   printf("min = %d\n\n", min);
+                  prevMin = min;
                }
             }
          }
-      prevMin = min;
       }
    element = min;
    return element;
@@ -48,7 +48,10 @@ int main(){
    //you may choose to do your testing here
    // int array[10] = {1,2,5,4,5,6,7,8,9,10};
    // printf("%d\n", orderStatistic(array, 10, 3));
-   int array2[4] = {5,2,4,1};
-   printf("%d\n", orderStatistic(array2, 4 , 2));
+   int array2[4] = {5,2,1,0};
+   printf("%d\n", orderStatistic(array2, 4 , 4));
+   printf("\n---------------\n");
+   
+   printf("%d\n", orderStatistic(array2, 4, 3));
    return 0;
 }

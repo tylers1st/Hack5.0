@@ -15,6 +15,13 @@ int contains(const int *arr, int size, int x) {
 
 void reverse(int *arr, int size) {
    //todo
+   int tempArr[size];
+   for(int i = 0, j = size - 1; i < size; i++,j--){
+      tempArr[i] = arr[j];
+   }
+   for(int i = 0; i < size; i++){
+      arr[i] = tempArr[i];
+   }
   return;
 }
 
